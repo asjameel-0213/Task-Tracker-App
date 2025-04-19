@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+// this is styled components
 const Container = styled.div`
     background-color: ${(props) => (props.dark ? "blue" : "#fff")};
     color: ${(props) => (props.dark ? "#fff" : "#000")};
@@ -19,6 +20,7 @@ const Button = styled.button`
     color: ${(props) => (props.dark ? "#000" : "#fff")};
 `;
 
+// this is CRUD functionality
 const TaskTracker = () => {
     const [tasks, setTasks] = useState([]);
     const [taskInput, setTaskInput] = useState(['']);
@@ -46,6 +48,7 @@ const TaskTracker = () => {
         setTasks(tasks.filter(task => task.id !== id));
     }
 
+    // implementing toggle mode
     const [dark, setDark] = useState(false);
 
     return (
